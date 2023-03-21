@@ -10,6 +10,11 @@
     <hr>
 
     <table id="produtos" border=1 width="100%">
+        <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Preço</th>
+        </tr>
 
     </table>
 
@@ -17,6 +22,7 @@
         //está pegando o elemento tabela do HTML
         let tabela = document.querySelector("#produtos");
 
+        function inserirLinha(nome, marca, preco){
         //vamos criar uma linha nessa tabela
         let linha = tabela.insertRow();
 
@@ -26,9 +32,20 @@
         let celPreco = linha.insertCell();
 
         //coloca valores nas células
-        celNome.innerHTML = "xxxx";
-        celMarca.innerHTML = "xxxx";
-        celPreco.innerHTML = "xxxx";
+        celNome.innerHTML = nome;
+        celMarca.innerHTML = marca;
+        celPreco.innerHTML = preco;
+        }
+
+        //fetch abre uma URL
+        fetch("http://localhost/3infob/paulovitor/conteudo_backend/aula9/produtos.php")
+        .then($resposta => $resposta.json())
+        .then($json => {
+            for(var i = 0; i<3; i++){
+                inserirLinha($json[i]["nome"], $json[i]["marca"], $json[i]["preco"]);
+            }
+        });
+
     </script>
 
 </body>
