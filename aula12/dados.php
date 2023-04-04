@@ -67,7 +67,6 @@
 
 $noticias = [$noticia1, $noticia2, $noticia3, $noticia4, $noticia5, $noticia6, $noticia7, $noticia8, $noticia9];
 
-?>
 
 
 
