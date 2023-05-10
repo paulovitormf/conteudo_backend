@@ -21,7 +21,6 @@
       $usuarios[] = $usuario;
    }
 
-   var_dump($usuarios);
 
 
 
