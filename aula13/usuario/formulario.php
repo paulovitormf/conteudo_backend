@@ -1,6 +1,6 @@
 <?php
-    require_once "conexao.php";
-    require_once "usuario/consultar_por_id.php";
+    require_once "../banco/conexao.php";
+    require_once "consultar_por_id.php";
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
     <h1>Cadastro de usuário</h1>
     <hr>
 
-    <form action="<?=isset($usuario) ? "usuario/atualizar.php" : "usuario/inserir.php"; ?>" method="post" 
+    <form action="<?=isset($usuario) ? "atualizar.php" : "inserir.php"; ?>" method="post" 
     enctype="multipart/form-data">
         
         <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario ?? "";?>"><br>
