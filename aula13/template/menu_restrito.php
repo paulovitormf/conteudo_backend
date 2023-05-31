@@ -13,16 +13,20 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     </li>
 
-                    <?php foreach($categorias as $categoria): ?>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?assunto=<?php echo $categoria->categoria;?>">
-                        <?php echo $categoria->categoria;?></a>
+                        <a class="nav-link" href="../site/index.php">
+                        Site</a>
                     </li>
-                    <?php endforeach; ?>
 
                     <li class="nav-item">
                         <a class="nav-link" href="../noticia/index.php">
-                        Acesso Restrito</a>
+                        Notícias</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../noticia/index.php">
+                        Usuários</a>
                     </li>
 
 
